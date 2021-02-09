@@ -7,13 +7,16 @@
 
 # testing
 /coverage
+/src/App.test.js
 
 # production
 /build
-/src/App.test.js
-/src/componentes/Areas.js
+
 
 # misc
+/.github/workflows
+/src/imgs
+
 .DS_Store
 .env.local
 .env.development.local
@@ -22,8 +25,7 @@
 /.firebase
 /.firebaserc
 /firebase.json
-/.github\workflows
-src/imgs
+/.eslintcache
 
 npm-debug.log*
 yarn-debug.log*
