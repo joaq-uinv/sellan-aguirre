@@ -10,6 +10,8 @@
 
 # production
 /build
+/src/App.test.js
+/src/componentes/Areas.js
 
 # misc
 .DS_Store
@@ -17,9 +19,11 @@
 .env.development.local
 .env.test.local
 .env.production.local
-src/App.test.js
-src/componentes/imgs
-src/componentes/Areas.js
+/.firebase
+/.firebaserc
+/firebase.json
+/.github\workflows
+src/imgs
 
 npm-debug.log*
 yarn-debug.log*
