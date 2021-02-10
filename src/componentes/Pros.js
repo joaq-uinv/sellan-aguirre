@@ -47,6 +47,7 @@ const ContenedorProsEstilado = styled.section`
     z-index: 0;
     background: whitesmoke;
     opacity: 0.15;
+    pointer-events: none;
   }
 
   @media (max-width: 500px) {

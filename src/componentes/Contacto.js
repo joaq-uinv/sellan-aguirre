@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
+import ImgBg from "../imgs/corte.JPG";
 
 const mostrarContenedor = keyframes`
   from {
@@ -28,15 +29,34 @@ from {
 `;
 
 const ContenedorContacto = styled.section`
+  background-image: url(${ImgBg});
+  background-size: cover;
+  background-attachment: fixed, fixed;
   color: whitesmoke;
-  background: #cfb997;
+  /* background: #cfb997; */
   min-height: 100vh;
+  width: 100%;
   margin-top: -5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* animation: ${mostrarContenedor} 5s ease; */
+  animation: ${mostrarContenedor} 5s ease;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: whitesmoke;
+    opacity: 0.15;
+    pointer-events: none;
+  }
 `;
 
 const Encabezado = styled.h1`
@@ -104,13 +124,7 @@ const SelectEstilado = styled.section`
 const ControlSelect = styled.div``;
 
 const ValorElegido = styled.div`
-  color: ${({ valorSelect }) => {
-    if (valorSelect === null) {
-      return "#777";
-    } else {
-      return "#39454b";
-    }
-  }};
+  color: #777;
   font-size: 0.825rem;
   padding-top: 0.5rem;
 `;
@@ -149,7 +163,7 @@ const OpcionEstilada = styled.div`
   transition: all 0.1s ease;
 
   &:hover {
-    background: #39454b;
+    background: #cfb997;
     color: white;
   }
 `;
