@@ -107,7 +107,6 @@ const ContenedorInputs = styled.div`
   @media (max-width: 500px) {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
   }
 `;
 
@@ -116,6 +115,10 @@ const InputEstilado = styled.input`
   border-radius: 1rem;
   padding: 1rem;
   outline: none;
+
+  @media (max-width: 500px) {
+    margin: 1rem 0;
+  }
 `;
 
 const SelectEstilado = styled.section`
@@ -123,6 +126,11 @@ const SelectEstilado = styled.section`
   border-radius: 1rem;
   padding: 1rem;
   outline: none;
+
+  @media (max-width: 500px) {
+    margin: 1rem 0;
+    padding: 2rem;
+  }
 `;
 
 const ControlSelect = styled.div``;
@@ -146,6 +154,10 @@ const Flecha = styled.div`
   border-left: 0.5rem solid transparent;
   border-bottom: ${({ menuAbierto }) =>
     !menuAbierto ? null : ".5rem solid #777"};
+
+  @media (max-width: 500px) {
+    left: 8rem;
+  }
 `;
 
 const ContenedorOpciones = styled.div`
