@@ -67,6 +67,10 @@ const ContenedorPpalEstilado = styled.section`
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
+
+  @media (max-width: 500px) {
+    margin-bottom: 4rem;
+  }
 `;
 
 const LogoEstilado = styled.img`
@@ -78,6 +82,7 @@ const LogoEstilado = styled.img`
   @media (max-width: 500px) {
     width: 8.25rem;
     height: 7.5rem;
+    margin-top: 4rem;
   }
 `;
 
@@ -91,7 +96,7 @@ const TxtPPalEstilado = styled.p`
 
   @media (max-width: 500px) {
     font-size: 1rem;
-    text-align: center;
+    text-align: justify;
     padding: 0 5rem;
   }
 `;

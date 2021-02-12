@@ -88,6 +88,10 @@ const FormEstilado = styled.form`
   box-shadow: 0 0 0.75rem 0 rgba(0, 0, 0, 0.2);
   padding: 1rem;
   animation: ${mostrarForm} 2s ease;
+
+  @media (max-width: 500px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const ContenedorInputs = styled.div`
@@ -103,7 +107,7 @@ const ContenedorInputs = styled.div`
   @media (max-width: 500px) {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 `;
 

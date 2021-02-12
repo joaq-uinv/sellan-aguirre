@@ -1,9 +1,10 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { FaLinkedinIn } from "react-icons/fa";
 //imgs
 import Firma from "../imgs/firma.jpeg";
 import Adriana from "../imgs/adriana.jpg";
+import Betina from "../imgs/betina.jpg";
 
 const mostrarContenedor = keyframes`
   from {
@@ -14,12 +15,20 @@ const mostrarContenedor = keyframes`
   }
 `;
 
-const mostrarImg = keyframes`
+const mostrarAdriana = keyframes`
 from {
   transform: translateX(-100%);
 } to {
   transform: translateX(0)
 }
+`;
+
+const mostrarBetina = keyframes`
+  from {
+    transform: translateX(100%);
+  } to {
+    transform: translateX(0);
+  }
 `;
 
 const ContenedorProsEstilado = styled.section`
@@ -31,7 +40,7 @@ const ContenedorProsEstilado = styled.section`
   min-height: 100vh;
   margin-top: -5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   animation: ${mostrarContenedor} 3s ease;
 
@@ -52,6 +61,8 @@ const ContenedorProsEstilado = styled.section`
 
   @media (max-width: 500px) {
     margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -64,7 +75,23 @@ const CartaEstilada = styled.section`
   width: 30%;
   max-width: 50%;
   padding: 1rem;
-  animation: ${mostrarImg} 2s ease;
+  ${(props) => {
+    if (props.adriana) {
+      return css`
+        animation: ${mostrarAdriana} 2s ease;
+      `;
+    } else {
+      return css`
+        animation: ${mostrarBetina} 2s ease;
+      `;
+    }
+  }};
+
+  @media (max-width: 500px) {
+    width: 75%;
+    padding: 0.5rem;
+    margin: 1rem;
+  }
 `;
 
 const ImgEstilada = styled.img`
@@ -135,19 +162,39 @@ const LinkEstilado = styled.a.attrs({
 const Pros = () => {
   return (
     <ContenedorProsEstilado>
-      <CartaEstilada>
+      <CartaEstilada adriana>
         <ImgEstilada src={Adriana} />
         <InfoProEstilado>
           <TituloProEstilado>Adriana Sellan</TituloProEstilado>
           <ContenedorDetallesEstilado>
             <DetallesProEstilado subtitulo>Socia</DetallesProEstilado>
             <DetallesProEstilado>
-              Abogada especializada en derecho de familia y sucesorio
+              Abogada especializada en derecho de familia y sucesorio y en
+              derecho laboral
             </DetallesProEstilado>
             <DetallesProEstilado>
               <LinkEstilado>
                 <FaLinkedinIn />
                 <p style={{ marginLeft: ".5rem" }}>Adriana Sellan</p>
+              </LinkEstilado>
+            </DetallesProEstilado>
+          </ContenedorDetallesEstilado>
+        </InfoProEstilado>
+      </CartaEstilada>
+      <CartaEstilada>
+        <ImgEstilada src={Betina} />
+        <InfoProEstilado>
+          <TituloProEstilado>Betina Aguirre</TituloProEstilado>
+          <ContenedorDetallesEstilado>
+            <DetallesProEstilado subtitulo>Socia</DetallesProEstilado>
+            <DetallesProEstilado>
+              Abogada especializada en derecho de familia y sucesorio y en
+              derecho societario
+            </DetallesProEstilado>
+            <DetallesProEstilado>
+              <LinkEstilado>
+                <FaLinkedinIn />
+                <p style={{ marginLeft: ".5rem" }}>Betina Aguirre</p>
               </LinkEstilado>
             </DetallesProEstilado>
           </ContenedorDetallesEstilado>
