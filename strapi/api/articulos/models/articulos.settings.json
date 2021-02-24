@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articulos",
+  "info": {
+    "name": "Artículos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tituloDeArticulo": {
+      "type": "string",
+      "default": "Título del artículo",
+      "required": true,
+      "unique": false
+    },
+    "cuerpoDelArticulo": {
+      "type": "richtext",
+      "required": true
+    },
+    "fechaDePublicacion": {
+      "type": "date",
+      "required": true,
+      "unique": false
+    },
+    "ramas_del_derechos": {
+      "via": "articulos",
+      "collection": "ramas-del-derecho"
+    }
+  }
+}

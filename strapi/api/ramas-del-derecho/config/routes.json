@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ramas-del-derechos",
+      "handler": "ramas-del-derecho.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ramas-del-derechos/count",
+      "handler": "ramas-del-derecho.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ramas-del-derechos/:id",
+      "handler": "ramas-del-derecho.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ramas-del-derechos",
+      "handler": "ramas-del-derecho.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ramas-del-derechos/:id",
+      "handler": "ramas-del-derecho.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ramas-del-derechos/:id",
+      "handler": "ramas-del-derecho.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

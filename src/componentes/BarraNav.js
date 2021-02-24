@@ -139,9 +139,9 @@ const BarraNav = () => {
         <ItemMenuEstilado>
           <LinkEstilado to="/nosotras">Nosotras</LinkEstilado>
         </ItemMenuEstilado>
-        {/* <ItemMenuEstilado>
-          <LinkEstilado to="/areas">Áreas</LinkEstilado>
-        </ItemMenuEstilado> */}
+        <ItemMenuEstilado>
+          <LinkEstilado to="/publicaciones">Publicaciones</LinkEstilado>
+        </ItemMenuEstilado>
         <ItemMenuEstilado>
           <LinkEstilado to="/contacto">Contacto</LinkEstilado>
         </ItemMenuEstilado>

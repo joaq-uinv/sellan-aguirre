@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ramas_del_derechos",
+  "info": {
+    "name": "Ramas del Derecho",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ramaDelDerecho": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "articulos": {
+      "collection": "articulos",
+      "via": "ramas_del_derechos",
+      "dominant": true
+    }
+  }
+}

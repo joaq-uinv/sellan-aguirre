@@ -4,6 +4,7 @@ import BarraNav from "./componentes/BarraNav";
 import Inicio from "./componentes/Inicio";
 import Pros from "./componentes/Pros";
 import Contacto from "./componentes/Contacto";
+import Articulos from "./componentes/Articulos";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={() => <Inicio />} />
         <Route path="/nosotras" component={() => <Pros />} />
         <Route path="/contacto" component={() => <Contacto />} />
+        <Route path="/publicaciones" component={() => <Articulos />} />
       </Switch>
     </Router>
   );
